@@ -1,0 +1,38 @@
+<header class="header-one">
+    <div class="top-bar">
+        <a [routerLink]="['/']">
+            <img src="/assets/img/logo.png" alt="logo">
+        </a>
+        <div class="menu-container">
+            <nav>
+                <ul class="menu one" style="width: 480px">
+                    <li class="dropdown dropdown-1">
+                        <a [routerLink]="['/']">Home</a>
+                    </li>
+                </ul>
+                <ul class="emoji" style="width: 298px;">
+                </ul>
+            </nav>
+        </div>
+        <ul class="conut-work">
+            <li class="bar-menu home-5">
+                <i class="fa-solid fa-align-left hamburger"></i>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+        <div class="res-log">
+            <a [routerLink]="['/']">
+                <img src="/assets/img/logo-red.png" alt="Responsive Logo">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a [routerLink]="['/']">Home</a>
+            </li>
+        </ul>
+        <a href="JavaScript:void(0)" id="res-cross"></a>
+    </div>
+
+</header>

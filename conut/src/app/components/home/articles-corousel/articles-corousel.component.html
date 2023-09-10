@@ -1,0 +1,20 @@
+<ngx-slick-carousel class="multiple-items"
+                    [config]="slickConfig"
+                    #slickModal="slick-carousel"
+    >
+    <div ngxSlickItem *ngFor="let item of articles$ | async as list" class="lazy">
+        <img alt="lazy" src="{{item.imageUrl}}">
+        <div class="relax">
+            <a href="#">{{item.category}}</a>
+            <div class="walkar">
+                <img alt="man" src="{{item.author.imageUrl}}">
+                <h4>{{item.author.fullName.surName}} {{item.author.fullName.firstName}} /<span>{{item.createdAt | date:'longDate'}}</span></h4>
+            </div>
+            <h2><a [routerLink]="['/articles', item.id]">{{item.title}}</a></h2>
+            <ul class="icon">
+                <li><i class="fa-solid fa-arrow-trend-up"></i>{{item.viewsCount}} Views</li>
+                <li><i class="fa-regular fa-comment-dots"></i>{{item.commentsCount}}</li>
+            </ul>
+        </div>
+    </div>
+</ngx-slick-carousel>

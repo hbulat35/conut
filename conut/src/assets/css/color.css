@@ -1,0 +1,75 @@
+/* Color */
+
+.Insta h5,.insta a,
+.bloggi a:hover,
+.themes span,
+.heading h3,
+.articles a:hover,
+.gallery span,
+.data a:hover,
+input[type=checkbox]:checked + label:before
+,.hot-news a,.hot-news i,
+.designer-data-gpp.three > i,
+.designer-data-gpp.three h5,
+.insta i,ul.trending a,
+.data-service > a:hover,
+.canadian h2 a:hover,
+.author-mark h4,
+.recent-posts.for h6,
+.recent-posts.for li:hover a,
+ul.categories-detail li:hover i,
+.recent-posts.for.categories li:hover span,
+.popular-posts-info h4,
+.post-for .slick-dots li button:before,
+.consider-data h2 a:hover
+,.top-bar-result a,
+.second-bar-2 i,
+.category-2 a:hover,
+.related-posts-data h3,
+.related-posts-a > a:hover,
+.leave-comment-data h3,
+.question,
+.icon i.red,
+.nothing h3,
+.error-data h4,
+.question-main h3,
+.location .location-tag i,
+.location-data a:hover,
+.shairng-data-2 h3{
+   
+    color: #ff0036;
+
+}
+
+
+
+/* Background Color */
+.play-batan:before,
+#return-to-top:hover,
+.leave-comment-data:before,
+.leave-comment-data:after,
+.related-posts-data:before,
+.related-posts-data:after,
+.reactin-emoji:hover span,
+.message-data a,li a.creative,
+.error-data a,.category-1 a,
+.popular-posts-detail li:hover,
+.subscribe a,
+.blog ul.pagenashion-number li.gepp a:hover,
+.Insta a,
+.popular > a,
+.article-img i,
+.heading h3:before,
+.heading h3:after,
+.load-mor a,
+.location i,
+.footer-media-2 i:hover
+,li.gepp a:hover,.bring h5,
+.canadian > a,
+.border,
+.consider-data > a,
+.dropdown_menu li a:before,.top-bar-result i{
+
+    background-color:#ff0036 ;
+
+}

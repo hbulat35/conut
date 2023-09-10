@@ -1,0 +1,72 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="footer-widget">
+                    <a [routerLink]="['/']">
+                        <img alt="logo" src="/assets/img/logo.png">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadip
+                        sed diam nonumy eirmodconvallis at venenat
+                        scelerisque tristique labore et.</p>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h5>Seward Street, Lorin 1440X Block
+                            kla Home City, USA.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="recent-posts">
+                    <h3>Recent Posts</h3>
+                    <ng-container *ngFor="let item of (recentPosts$ | async)">
+                        <div class="post-img">
+                            <figure>
+                                <img alt="recent-posts" src="{{item.imageUrl}}">
+                            </figure>
+                            <div class="data">
+                                <h6>{{item.createdAt | date:'longDate'}}</h6>
+                                <a [routerLink]="['/articles', item.id]"
+                                    routerLinkActive="router-link-active">{{item.title}}</a>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="recent-posts">
+                    <h3>Newsletters</h3>
+                    <p>To receive the latest updates and Latest
+                        Posts enter your email.</p>
+                    <div class="News-footer-data">
+                        <input type="text" placeholder="Enter your Email here">
+                        <button>
+                            <i class="fa fa-envelope"></i>
+                        </button>
+                    </div>
+                    <div class="checkbox-Website">
+                        <input type="checkbox" id="weekday-2" name="weekday-2" value="Saturday">
+                        <label for="weekday-2">Sending Me Notification Only.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer-media">
+        <div class="container">
+            <div class="row">
+                <div class="footer-media-work">
+                    <ul class="footer-media-2">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-google-plus-g"></i>Google+</a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i>Linked In</a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i>Pinterest</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4>Conut - Copyright 2021. Design by Winsfolio</h4>
+</footer>

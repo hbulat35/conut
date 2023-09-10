@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.article figure {
+    min-height: 460px;
+    img {
+        min-height: 460px;
+    }
+}

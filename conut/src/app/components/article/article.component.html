@@ -1,0 +1,141 @@
+<section class="consider-ourselves" style="background-image: url({{article.imageUrl}});">
+    <div class="container">
+        <div class="row">
+            <div class="consider-our">
+                <div class="walkar">
+                    <img alt="man" src="{{article.author.imageUrl}}">
+                    <h4>{{article.author.fullName.surName}} {{article.author.fullName.firstName}} /
+                        <span>{{article.createdAt | date:'longDate'}}</span>
+                    </h4>
+                </div>
+                <h2>{{article.title}}</h2>
+                <div class="emoji-flex">
+                    <ul class="icon">
+                        <li><a class="creative" href="#">{{article.category}}</a></li>
+                        <li><i class="fa-solid fa-arrow-trend-up"></i>{{article.viewsCount}} Views</li>
+                        <li><i class="fa-regular fa-comment-dots"></i>{{article.commentsCount}}</li>
+                    </ul>
+                    <div class="emoji-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog-1 gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12">
+                <div class="blog-details-one">
+                    <div class="simple-description">
+                        <h3>Simple Description</h3>
+                        <p>{{article.description}}</p>
+                    </div>
+                    <div class="author-work">
+                        <div class="top-bar-Author">
+                            <div class="author-data">
+                                <img alt="author" src="{{article.author.imageUrl}}">
+                                <p>Written By</p>
+                                <h3>{{(article.author.fullName.surName + ' ' + article.author.fullName.firstName).toUpperCase()}}</h3>
+                            </div>
+                            <ul class="social-icons">
+                                <li *ngFor="let link of article.author.links">
+                                    <a class="{{link.shortName}}" href="{{link.url}}">
+                                        <i class="fa-brands fa-{{link.shortName}}"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="star" href="#">
+                                        <i class="fa-solid fa-star"></i>{{article.author.rate | number:'1.1-1' }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="two-bar-Author">
+                            <p>{{article.author.description}}</p>
+                        </div>
+
+                        <div class="related-posts">
+                            <div class="related-posts-data">
+                                <h3>YOU MAY ALSO LIKE?</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let post of alsoLikePosts">
+                                    <div class="related-posts-pics hover15">
+                                        <figure>
+                                            <img alt="canadian" src="{{post.imageUrl}}">
+                                        </figure>
+                                        <a [routerLink]="['/articles', post.id]">{{post.createdAt | date:'longDate'}}</a>
+                                        <div class="related-posts-a">
+                                            <a [routerLink]="['/articles', post.id]">{{post.title}}</a>
+                                            <ul class="icon">
+                                                <li><i class="fa-solid fa-arrow-trend-up"></i>{{post.viewsCount}} Views</li>
+                                                <li><i class="fa-regular fa-comment-dots"></i>{{post.commentsCount}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comments-data">
+                                <h3>{{article.commentsCount | number: '2.0-0' }} comment</h3>
+                            </div>
+                            <ul>
+                                <li *ngFor="let comment of article.comments">
+                                    <div class="comments-detail-main">
+                                        <img alt="man" src="{{comment.imageUrl ? comment.imageUrl : 'https://via.placeholder.com/100x110'}}">
+                                        <div class="comments-detail-data">
+                                            <h4> {{comment.authorName}}
+                                                <span>{{comment.createdAt | date:'longDate'}}</span>
+                                            </h4>
+                                            <p>{{comment.content}}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="message-data">
+                            <div class="leave-comment-data">
+                                <h3>Leave a Comment</h3>
+                            </div>
+                            <input type="text" name="Name" placeholder="your Name">
+                            <div class="message-detail">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="message-data">
+
+                                <input type="checkbox" id="html">
+                                <label for="html">I have read and accepted the terms of use and the privacy
+                                    policy</label>
+
+                                <a class="send-message" href="#">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="author-mark two">
+                    <img alt="author" src="{{article.author.imageUrl}}" style="display: unset;">
+                    <h2>{{article.author.fullName.surName}} {{article.author.fullName.firstName}}</h2>
+                    <h4>{{article.author.professions}}</h4>
+                    <p>{{article.author.description}}</p>
+                    <div class="sign" *ngIf="article.author.signImageUrl">
+                        <img alt="sign" src="{{article.author.signImageUrl}}" style="display: unset;">
+                    </div>
+                    <ul class="social-icons">
+                        <li *ngFor="let link of article.author.links">
+                            <a class="{{link.shortName}}" href="{{link.url}}">
+                                <i class="fa-brands fa-{{link.shortName}}"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
